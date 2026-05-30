@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-red: hsl(4, 100%, 67%);
+        --color-blue-800: hsl(234, 29%, 20%);
+        --color-blue-700: hsl(235, 18%, 26%);
+        --color-grey: hsl(0, 0%,58%);
+        --color-white: hsl(0, 0%, 100%);
+        --font-roboto:"Roboto", sans-serif;
+      }
+    </style>
+</head>
+
+<body class="lg:bg-blue-700">
+  <main
+    class="font-roboto text-base lg:flex lg:space-between lg:gap-10 lg:bg-white lg:mx-80 lg:items-center lg:my-30 lg:mx-40 lg:rounded-3xl lg:flex-row lg:">
+    <!-- Sign-up form start -->
+    <div class="lg:w-2/5">
+      <img src="/assets/images/illustration-sign-up-desktop.svg" alt="" class="order-last object-cover h-full w-4/5">
+      <img src="/assets/images/illustration-sign-up-mobile.svg" alt="sign-up-mobile"
+        class="lg:hidden w-full h-full object-cover">
+    </div>
+    <div class="lg:w-3/5 lg:order-first">
+      <div class="px-4">
+        <h1 class="my-8 text-5xl text-bold font-roboto font-bold">Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <div class="my-6">
+          <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> Product discovery and
+            building
+            what
+            matters</p>
+          <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> Measuring to ensure
+            updates
+            are a
+            success</p>
+          <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> And much more!</p>
+        </div>
+        <form>
+          <label for="email" class="bold">Email address</label>
+          <input type="email" id="email" name="email" placeholder="email@company.com"
+            class="w-full border rounded-md mt-2 p-4">
+          <button type="submit" class="bg-blue-800 w-full text-white py-4 my-4 rounded-md font-weight-700">Subscribe to
+            monthly
+            newsletter</button>
+        </form>
+        <div class="hidden">
+          Thanks for subscribing!
+
+          A confirmation email has been sent to ash@loremcompany.com.
+          Please open it and click the button inside to confirm your subscription.
+
+          Dismiss message
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-13px align-center hidden">
+    <p class="flex justify-center">Challenge <span class="mx-2">by</span> <a class="text-red"
+        href="https://www.frontendmentor.io?ref=challenge">Frontend
+        Mentor</a>.</p>
+    <p class="flex justify-center">Coded <span class="mx-2">by</span> <a class="text-red"
+        href="https://www.linkedin.com/in/reshadmammedov">Reshad
+        Mammedov</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
