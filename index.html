@@ -67,14 +67,17 @@
       </div>
     </div>
   </main>
-  <div id="success" class="hidden flex flex-col justify-between mt-6 min-h-screen p-6">
-    <div class="mt-8">
-      <img src="assets/images/icon-success.svg" alt="icon-success" class="my-10">
-      <h1 class="mt-10 text-5xl font-bold">Thanks for subscribing!</h1>
-      <p class="my-4 text-xl">A confirmation email has been sent to <span class="user_email font-bold">email</span>.
+  <div id="success"
+    class="!hidden flex flex-col justify-between mt-6 p-6 min-h-screen lg:rounded-3xl lg:flex lg:justify-between lg:p-10 lg:bg-white lg:min-h-fit lg:max-w-md lg:mt-0">
+    <div class="mt-8 lg:mt-0">
+      <img src="assets/images/icon-success.svg" alt="icon-success" class="my-10 lg:mb-6 lg:mt-0">
+      <h1 class="mt-10 text-5xl font-bold lg:mb-4 ">Thanks for subscribing!</h1>
+      <p class="my-4 text-xl lg:my-4 ">A confirmation email has been sent to <span
+          class="user_email font-bold">email</span>.
         Please open it and click the button inside to confirm your subscription</p>
     </div>
-    <button class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-4 mt-auto rounded-xl font-bold"
+    <button
+      class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-4  mt-auto rounded-xl font-bold lg:mt-8 lg:py-4 lg:rounded-md lg:mb-0"
       onclick="dismiss()">Dismiss
       message</button>
   </div>
