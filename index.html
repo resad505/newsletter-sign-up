@@ -27,14 +27,14 @@
 <body class="lg:bg-blue-700 min-h-screen lg:flex lg:items-center lg:justify-center">
   <main
     class="font-roboto text-base w-full lg:w-3/5 lg:flex lg:justify-between lg:gap-10 lg:bg-white lg:max-w-[928px] lg:mx-auto lg:items-center  lg:rounded-3xl lg:flex-row-reverse m-0">
-    <div class="lg:w-1/2">
+    <div class="lg:w-1/2" id="sign-up__image">
       <img src="assets/images/illustration-sign-up-desktop.svg" alt=""
         class="lg:object-cover lg:h-full lg:p-4 hidden lg:block">
       <img src="assets/images/illustration-sign-up-mobile.svg" alt="sign-up-mobile"
         class="lg:hidden w-full h-auto  object-cover rounded-b-lg">
     </div>
-    <div class="lg:w-1/2">
-      <div class="lg:pl-12 lg:py-8 p-6">
+    <div class="lg:w-1/2" id="sign-up__content">
+      <div class="lg:pl-12 lg:py-8 p-6" id="padding__etc">
         <h1 class="lg:my-4 text-5xl text-bold  font-roboto font-bold py-4">Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <div class="my-3">
@@ -54,27 +54,30 @@
             <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> And much more!</p>
           </div>
         </div>
-        <form>
+        <form id="form">
           <label for="email" class="font-bold">Email address</label>
           <input type="email" id="email" name="email" placeholder="email@company.com"
             class="w-full border rounded-md mt-2 p-4">
           <button type="submit" id="submit"
-            class="cursor-pointer bg-blue-800 w-full text-white py-4 my-4 rounded-md font-bold">Subscribe to
+            class="cursor-pointer bg-blue-800 w-full text-white py-4 my-4 rounded-md font-bold"
+            onclick="submit__click(event)">Subscribe to
             monthly
             newsletter</button>
         </form>
-        <div id="success" class="hidden">
-          <p>Thanks for subscribing!</p>
-
-          <p>A confirmation email has been sent to ash@loremcompany.com.
-            Please open it and click the button inside to confirm your subscription.
-          </p>
-          <button class="cursor-pointer bg-blue-800 w-full text-white py-4 my-4 rounded-md font-bold">
-            Dismiss message</button>
-        </div>
       </div>
     </div>
   </main>
+  <div id="success" class="hidden flex flex-col justify-between mt-6 min-h-screen p-6">
+    <div class="mt-8">
+      <img src="assets/images/icon-success.svg" alt="icon-success" class="my-10">
+      <h1 class="mt-10 text-5xl font-bold">Thanks for subscribing!</h1>
+      <p class="my-4 text-xl">A confirmation email has been sent to <span class="user_email font-bold">email</span>.
+        Please open it and click the button inside to confirm your subscription</p>
+    </div>
+    <button class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-4 mt-auto rounded-xl font-bold"
+      onclick="dismiss()">Dismiss
+      message</button>
+  </div>
 
   <footer class="text-xs align-center hidden">
     <p class="flex justify-center">Challenge <span class="mx-2">by</span> <a class="text-red"
@@ -85,6 +88,7 @@
         Mammedov</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

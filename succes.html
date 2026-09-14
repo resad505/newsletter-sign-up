@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-red: hsl(4, 100%, 67%);
+        --color-blue-800: hsl(234, 29%, 20%);
+        --color-blue-700: hsl(235, 18%, 26%);
+        --color-grey: hsl(0, 0%,58%);
+        --color-white: hsl(0, 0%, 100%);
+        --font-roboto:"Roboto", sans-serif;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="flex flex-col justify-between mt-6 min-h-screen p-6 ">
+        <div class="mt-8">
+            <img src="assets/images/icon-success.svg" alt="icon-success" class="my-10">
+            <h1 class="mt-10 text-5xl font-bold">Thanks for subscribing!</h1>
+            <p class="my-4 text-xl">A confirmation email has been sent to <span
+                    class="user_email font-bold">email</span>.
+                Please open it and click the button inside to confirm your subscription</p>
+        </div>
+        <button class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-10 mt-auto rounded-xl font-bold">Dismiss
+            message</button>
+    </div>
+
+</body>
+<footer class="text-xs align-center hidden">
+    <p class="flex justify-center">Challenge <span class="mx-2">by</span> <a class="text-red"
+            href="https://www.frontendmentor.io?ref=challenge">Frontend
+            Mentor</a>.</p>
+    <p class="flex justify-center">Coded <span class="mx-2">by</span> <a class="text-red"
+            href="https://www.linkedin.com/in/reshadmammedov">Reshad
+            Mammedov</a>.
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
