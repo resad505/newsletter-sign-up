@@ -37,30 +37,35 @@
       <div class="lg:pl-12 lg:py-8 p-6" id="padding__etc">
         <h1 class="lg:my-4 text-5xl text-bold  font-roboto font-bold py-4">Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <div class="my-3">
-          <div>
-            <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> Product discovery and
+        <ul class="my-3 space-y-3">
+          <li class="flex gap-2 items-center">
+            <img class="inline px-2" src="assets/images/icon-list.svg" alt="icon-list">
+            <p> Product discovery and
               building
               what
               matters</p>
-          </div>
-          <div>
-            <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> Measuring to ensure
+          </li>
+          <li class="flex gap-2 items-center">
+            <img class="inline px-2" src="assets/images/icon-list.svg" alt="icon-list">
+            <p class="items-end"> Measuring to ensure
               updates
               are a
               success</p>
-          </div>
-          <div>
-            <p><img class="inline py-4 px-2" src="assets/images/icon-list.svg" alt="icon-list"> And much more!</p>
-          </div>
-        </div>
-        <form id="form">
-          <label for="email" class="font-bold">Email address</label>
+          </li>
+          <li class="flex gap-2 items-center">
+            <img class="inline px-2" src="assets/images/icon-list.svg" alt="icon-list">
+            <p>And much more!</p>
+          </li>
+        </ul>
+        <form novalidate>
+          <label for="email" class="font-bold">Email address<span aria-live="polite" id="error__msg"
+              class="!hidden text-red-500 float-right font-normal"> Valid email
+              required</span></label>
           <input type="email" id="email" name="email" placeholder="email@company.com"
-            class="w-full border rounded-md mt-2 p-4">
+            class="w-full border rounded-md mt-2 p-4 border-gray-300 focus:outline-none focus:border-blue-800">
           <button type="submit" id="submit"
-            class="cursor-pointer bg-blue-800 w-full text-white py-4 my-4 rounded-md font-bold"
-            onclick="submit__click(event)">Subscribe to
+            class="cursor-pointer bg-blue-800 w-full text-white py-4 my-4 rounded-md font-bold hover:bg-red duration-700 hover:shadow-md">Subscribe
+            to
             monthly
             newsletter</button>
         </form>
@@ -72,17 +77,17 @@
     <div class="mt-8 lg:mt-0">
       <img src="assets/images/icon-success.svg" alt="icon-success" class="my-10 lg:mb-6 lg:mt-0">
       <h1 class="mt-10 text-5xl font-bold lg:mb-4 ">Thanks for subscribing!</h1>
-      <p class="my-4 text-xl lg:my-4 ">A confirmation email has been sent to <span
-          class="user_email font-bold">email</span>.
+      <p class="my-4 text-base lg:my-4 ">A confirmation email has been sent to <span class="font-bold"
+          id="user__email">email</span>.
         Please open it and click the button inside to confirm your subscription</p>
     </div>
     <button
-      class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-4  mt-auto rounded-xl font-bold lg:mt-8 lg:py-4 lg:rounded-md lg:mb-0"
-      onclick="dismiss()">Dismiss
+      class="cursor-pointer bg-blue-800 w-full text-white py-4 mb-4  mt-auto rounded-xl font-bold hover:bg-red duration-700 lg:mt-8 lg:py-4 lg:rounded-md lg:mb-0"
+      id="dismiss__btn">Dismiss
       message</button>
   </div>
 
-  <footer class="text-xs align-center hidden">
+  <footer class="text-xs align-center absolute mt-auto bottom-2 text-amber-500">
     <p class="flex justify-center">Challenge <span class="mx-2">by</span> <a class="text-red"
         href="https://www.frontendmentor.io?ref=challenge">Frontend
         Mentor</a>.</p>
