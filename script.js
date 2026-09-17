@@ -1,4 +1,3 @@
-const submit_btn = document.querySelector("#submit")
 const success_msg = document.querySelector("#success")
 const main = document.querySelector("main")
 const form = document.querySelector("form")
@@ -25,7 +24,7 @@ function hideError() {
     error__msg.classList.add("!hidden")
 }
 function form__validation() {
-    let input__value = input.value.trim()
+    const input__value = input.value.trim()
     const isValidEmail = emailRegex.test(input__value)
     if (!isValidEmail) {
         input.classList.add("bg-red-100", "border-red-500")
